@@ -1,0 +1,206 @@
+body {
+  /* font-family: Roboto; */
+  /* 전체 페이지 스크롤 없애기 */
+  height: 100vh;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+
+/* 객실 컨셉 모달 */
+.modal {
+  color: whitesmoke !important;
+}
+
+.card-title-en,
+#model-desc-en, #hotel-name-en {
+  font-weight: 100;
+  color: lightgray;
+}
+
+.card-body {
+  padding-bottom: 1rem !important;
+}
+
+/* #hotel-name-ko {
+  font-weight: 500;
+} */
+
+/* --- 콜랩스 --- */
+.collapse-title {
+  /* padding-inline-end: 1rem !important; */
+  cursor: pointer;
+  /* white-space: pre; */
+  font-size: 0.825rem !important;
+}
+
+.collapse {
+  max-width: 22rem;
+}
+
+/* .tab-content {
+  max-height: 22rem !important;
+} */
+
+/* 마우스 이벤트 비활성화 */
+.custom-disabled {
+  pointer-events: none;
+}
+
+.custom_auto_scroll {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  /* 모바일 Safari에서 스크롤 부드러운 */
+}
+
+/* 호버시 가로 스크롤 */
+.custom_auto_scroll:active,
+.custom_auto_scroll:hover {
+  animation: scrollOnHover 5s linear infinite;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+  width: 0;
+  /* 가로 스크롤바 너비 */
+  height: 0;
+  /* 세로 스크롤바 높이 */
+}
+
+/* 
+  익스플로러, 파이어폭스는 -webkit-scrollbar 코드로 동작이 되지 않으며, 스크롤바를 숨기기 위해서는 다음과 같은 코드를 작성
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+/*scrollbar-width: none; /* 파이어폭스 */
+/**/
+
+@keyframes scrollOnHover {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(100% - 100vw));
+  }
+}
+
+.label-en {
+  font-weight: 300;
+  opacity: 0.7;
+  font-variant: small-caps;
+  /* color: darkslategray; */
+}
+
+
+
+/* --- 바텀시트 --- */
+.bottomsheet-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: height 0.3s ease;
+  /* text-align: center; */
+}
+
+.content {
+  padding: 10px;
+}
+
+.handle {
+  display: block;
+  /* 항상 보이도록 설정 */
+  width: 40px;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.handle::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  /* 요소의 위쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+  bottom: -5px;
+  /* 요소의 아래쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+  left: -5px;
+  /* 요소의 왼쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+  right: -5px;
+  /* 요소의 오른쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+}
+
+
+
+/* 바텀시트 아이콘 애니메이션 */
+@keyframes elastic {
+  0% {
+    transform: translate3d(0, 60px, 0);
+  }
+
+  40% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+/* 아이콘 애니메이션 */
+#animated-svg {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2);
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+/* 타이포 */
+
+/* 너비 420이하 화면에 대한 스타일 */
+@media only screen and (max-width: 420px) {
+  /* body {
+    font-size: 0.875rem;
+  } */
+  #hotel-name-ko, #hotel-name-en {
+    /* font-size: 0.875rem; */
+    /* 모바일 화면에서는 14px로 설정 */
+    white-space: nowrap;
+  }
+
+  .collapse {
+    max-width: 18rem;
+  }
+}
+
+
+/* 너비 290이하 화면에 대한 스타일 */
+@media only screen and (max-width: 290px) {
+  
+}
+
+/* 아이콘 */
+.custom-icon {
+  /* filter: invert(24%) sepia(9%) saturate(1628%) hue-rotate(176deg) brightness(20%) contrast(85%); */
+  /* filter: brightness(0.2); */
+  /* filter: drop-shadow(20px 3px 20px #334155); */
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <script type="application/javascript">
+    // IP 값을 저장할 전역 변수를 선언합니다.
+    let ipAddress;
+
+    function getIP(json) {
+      // 서버로부터 받은 IP 값을 전역 변수에 저장합니다.
+      ipAddress = json.ip;
+    }
+  </script>
+  <script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script>
+  <!-- 다이브인 데이터 파일 -->
+  <script src="https://도메인/보안/보안/divein-data.js"></script>
+  <!-- 
+    남산목: 4aRsVZ5Lt1H
+    딥플로우 해운대: y1rRVkiRCAs
+    머물다가: aYC8RgMxFzg
+    카푸치노
+        807: WeMZXCQv42n
+        809: uUPjwK5ELcM
+    스카이파크
+        1518: uRJ5LvRBVUy
+        1520: bxevM6WTkou
+        1548: PDHoC222mvv
+        1549: LYKUVX3Xc5h
+        1550: udf1umEiUoT
+ -->
+  <script type="application/javascript">
+    // IP 값을 저장할 전역 변수를 선언합니다.
+    let data;
+    const modelId = "uUPjwK5ELcM";
+
+    // modelId 값과 일치하는 공간 데이터 객체 찾기
+    data = diveinData.find(item => item.modelId === modelId);
+    // title 바꾸기
+    document.title = `다이브인 DIVE IN :: ${data.hotelNameKo} :: ${data.hotelNameEn} ${data.modelNumber}`;
+
+    // console.log(diveinData);
+  </script>
+  <!-- dataLayer 변수 추가-->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'user_ip': ipAddress //고객 번호와 같은 개인정보가 아닌 고유한 식별 값을 입력합니다.
+    });
+    // console.log(ipAddress + " 보냄");
+  </script>
+  <!-- End dataLayer 변수 추가-->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-보안');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mp:graph-query" content="src=graphql/prefetch.gql, query=GetModelPrefetch">
+  <meta name="description" content="예술과 공간에 빠지다. 몰입형 아트 플랫폼, 다이브인">
+  <meta name="keywords" content="올라운더, 3D, 드론, 촬영, 호텔, 다이브인, divein, 디자인, 동대문">
+  <!-- 기타 메타 데이터 추가 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="다이브인 DIVE IN">
+  <meta property="og:description" content="예술과 공간에 빠지다. 몰입형 아트 플랫폼, 다이브인">
+  <meta property="og:keyword" content="올라운더, 3D, 드론, 촬영, 호텔, 다이브인, divein, 디자인, 동대문">
+  <meta id='meta_og_image' property="og:image"
+    content="https://cdn.imweb.me/upload/S20200606b4d8abadb635f/13c6f4f04ac3d.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta property="og:image" content="https://cdn.imweb.me/upload/S20200606b4d8abadb635f/13c6f4f04ac3d.png">
+  <meta name="twitter:image" content="https://cdn.imweb.me/upload/S20200606b4d8abadb635f/13c6f4f04ac3d.png">
+  <meta property="og:url" content="https://도메인/보안/DIVE_IN_YERIM_LEE_ART_STAY_SEOUL">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/diy.css">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.3/dist/full.min.css" rel="stylesheet" type="text/css" />  <script src="https://cdn.tailwindcss.com"></script>
+  <title>다이브인 DIVE IN :: </title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-보안" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <div class="fixed z-10 hidden text-slate-700" id="overlay-container">
+
+
+    <!-- 왼쪽 상단 메뉴 text-lg  -->
+    <div class="fixed left-4 top-4 z-[11]">
+
+      <button class="btn btn-circle btn-ghost bg-transparent btn-sm" onclick="my_modal_3.showModal()"
+        id="authorInfoBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+        </svg>
+      </button>
+
+      <dialog id="my_modal_3" class="modal">
+        <div class="modal-box glass px-10">
+          <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          </form>
+          <h3 class="font-bold text-lg"></h3>
+          <div class="card bg-transparent">
+            <figure>
+              <img src="" alt="" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title relative rounded-full px-3 py-1 leading-6 ring-1 ring-white/30 hover:ring-white/40">
+                객실 소개</h2>
+              <div class="card-title-en text-sm">DIVE IN ART STAY</div>
+              <div class="divider"></div>
+              <p id="model-desc-ko"></p>
+              <br>
+              <p id="model-desc-en"></p>
+              <div class="divider"></div>
+              <!-- <h2 class="card-title relative rounded-full px-3 py-1 leading-6 ring-1 ring-white/30 hover:ring-white/40 xl-text">
+                호텔 스카이파크 킹스타운 동대문</h2> -->
+              <p id="hotel-name-ko"></p>
+              <p id="hotel-name-en"></p>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+    </div>
+
+
+    <!-- 오른쪽 상단 탭 메뉴 -->
+    <div class="fixed right-4 top-4">
+
+      <div class="collapse collapse-arrow collapse-open bg-base-200 glass ml-4 max-w-726" id="myCollapse">
+        <div class="collapse-title text-base font-medium" id="model-name"></div>
+        <div class="collapse-content overflow-y-scroll">
+          <div role="tablist" class="tabs tabs-lifted pb-2">
+
+            <input type="radio" name="my_tabs_2" role="tab"
+              class="tab opacity-80 [--tab-bg:white] [--tab-border-color:transparent]" aria-label="Info" checked />
+            <div role="tabpanel" class="tab-content glass opacity-90 border-transparent rounded-box p-6 min-w-full">
+            </div>
+
+            <input type="radio" name="my_tabs_2" role="tab"
+              class="tab opacity-80 [--tab-bg:white] [--tab-border-color:transparent]" aria-label="Tags" />
+            <div role="tabpanel" class="tab-content glass opacity-90 border-transparent rounded-box p-6 min-w-full">
+            </div>
+
+            <input type="radio" name="my_tabs_2" role="tab"
+              class="tab opacity-80 [--tab-bg:white] [--tab-border-color:transparent]" aria-label="About" />
+            <div role="tabpanel" class="tab-content glass opacity-90 border-transparent rounded-box p-6 min-w-full">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 바텀 시트 -->
+    <div class="fixed bottom-0">
+
+      <div id="bottomsheetContainer" class="bottomsheet-container">
+        <div id="handle" class="handle abled-style"></div>
+        <div class="glass rounded-box px-4" id="bottom-sheet-box">
+          <div class="content h-40 px-0 flex justify-center" id="bottomSheetContent">
+
+            <ul class="menu menu-horizontal rounded-box px-0" id="bottomSheetUL">
+              <li>
+                <a class="tooltip" data-tip="투어" id="itemTour">
+
+                  <label class="swap swap-rotate" id="itemTourIcon">
+
+                    <!-- tour outline icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="swap-off w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                    </svg>
+
+                    <!--  tour solid icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="swap-on w-6 h-6">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12ZM9 8.25a.75.75 0 0 0-.75.75v6c0 .414.336.75.75.75h.75a.75.75 0 0 0 .75-.75V9a.75.75 0 0 0-.75-.75H9Zm5.25 0a.75.75 0 0 0-.75.75v6c0 .414.336.75.75.75H15a.75.75 0 0 0 .75-.75V9a.75.75 0 0 0-.75-.75h-.75Z"
+                        clip-rule="evenodd" />
+                    </svg>
+
+                  </label>
+
+                </a>
+              </li>
+              <li>
+                <a class="tooltip" data-tip="전체보기" id="itemDollHouse">
+                  <label class="swap swap-rotate" id="itemDollHouseIcon">
+
+                    <!-- dollhouse outline icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="swap-off w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                    </svg>
+
+                    <!--  dollhouse solid icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="swap-on w-6 h-6">
+                      <path
+                        d="M12.378 1.602a.75.75 0 0 0-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03ZM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 0 0 .372-.648V7.93ZM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 0 0 .372.648l8.628 5.033Z" />
+                    </svg>
+
+                  </label>
+
+                </a>
+              </li>
+              <li>
+                <a class="tooltip" data-tip="평면도 보기" id="itemFloorPlan">
+
+                  <label class="swap swap-rotate" id="itemFloorPlanIcon">
+
+                    <!-- FloorPlan outline icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="swap-off w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                    </svg>
+
+                    <!--  FloorPlan solid icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="swap-on w-6 h-6">
+                      <path fill-rule="evenodd"
+                        d="M8.161 2.58a1.875 1.875 0 0 1 1.678 0l4.993 2.498c.106.052.23.052.336 0l3.869-1.935A1.875 1.875 0 0 1 21.75 4.82v12.485c0 .71-.401 1.36-1.037 1.677l-4.875 2.437a1.875 1.875 0 0 1-1.676 0l-4.994-2.497a.375.375 0 0 0-.336 0l-3.868 1.935A1.875 1.875 0 0 1 2.25 19.18V6.695c0-.71.401-1.36 1.036-1.677l4.875-2.437ZM9 6a.75.75 0 0 1 .75.75V15a.75.75 0 0 1-1.5 0V6.75A.75.75 0 0 1 9 6Zm6.75 3a.75.75 0 0 0-1.5 0v8.25a.75.75 0 0 0 1.5 0V9Z"
+                        clip-rule="evenodd" />
+                    </svg>
+
+                  </label>
+
+                </a>
+              </li>
+              <li>
+                <a class="tooltip" data-tip="공유하기" id="itemShare">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                  </svg>
+
+
+
+                </a>
+              </li>
+              <li id="itemBgm">
+                <iframe src="https://도메인/silence.mp3" allow="autoplay" style="display: none;"></iframe>
+                <audio id="audio-track" src="" data-keepplaying allow="autoplay"></audio>
+
+                <a class="tooltip" data-tip="Music">
+
+                  <label class="swap swap-rotate swap-active" id="itemBgmIcon">
+
+                    <!-- play icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="swap-on w-6 h-6" id="animated-svg">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                    </svg>
+
+                    <!-- puse icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="swap-off w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                    </svg>
+
+                  </label>
+
+
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <!-- 
+    남산목: 4aRsVZ5Lt1H
+    딥플로우 해운대: y1rRVkiRCAs
+    머물다가: aYC8RgMxFzg
+    카푸치노
+        807: WeMZXCQv42n
+        809: uUPjwK5ELcM
+    스카이파크
+        1518: uRJ5LvRBVUy
+        1520: bxevM6WTkou
+        1548: PDHoC222mvv
+        1549: LYKUVX3Xc5h
+        1550: udf1umEiUoT
+ -->
+
+  <!-- 메타포트 뷰어 -->
+  <matterport-viewer m="uUPjwK5ELcM" application-key="보안" qs="1" config-use-effect-composer="1"
+    id="matterportViewer"></matterport-viewer>
+
+  <!-- 자바스크립트 모듈 -->
+  <script src="https://도메인/보안/보안/browser.js"></script>
+</body>
+
+</html>

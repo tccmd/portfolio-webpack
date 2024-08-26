@@ -1,0 +1,31 @@
+{
+  "name": "allrounder_divein_mpbase",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tccmd <tccmd52@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.8.1",
+    "rimraf": "^5.0.1",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@compai/font-noto-sans-kr": "^0.0.3",
+    "@matterport/webcomponent": "^0.1.28",
+    "copy-webpack-plugin": "^11.0.0",
+    "js-bottomsheet": "^1.2.6",
+    "three": "^0.146.0",
+    "typeface-noto-sans-kr": "^1.1.13"
+  },
+  "scripts": {
+    "dev": "webpack serve --mode=development",
+    "build": "rimraf dist && webpack && rm dist/index.js.LICENSE.txt"
+  }
+}

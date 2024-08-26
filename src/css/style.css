@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+html, body {
+  text-align: center;
+  height: 100%;
+}
+
+body {
+  background-color: #f9faff;
+  background-image: url(https://i.imgur.com/LlVxfFq.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+*, div, span {
+  box-sizing: border-box;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #9aa9b5;
+  background: #fff;
+  overflow: hidden;
+  margin: auto;
+  transition: box-shadow 0.2s ease-out;
+}
+.social span, .social div {
+  margin: auto;
+}
+.social .social-links {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(62, 130, 251, 0);
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  transition: all 0.25s ease;
+}
+.social .social-links a {
+  margin: auto;
+  background: #fff;
+  color: #3e82fb;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 40px;
+  font-size: 15px;
+  transform: translate3d(0, 60px, 0);
+  transition: all 0.2s;
+}
+.social .social-links a:hover {
+  background: #89b3fd;
+  color: #fff;
+}
+
+@keyframes elastic {
+  0% {
+    transform: translate3d(0, 60px, 0);
+  }
+  40% {
+    transform: translate3d(0, -5px, 0);
+  }
+  70% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* --- 바텀시트 --- */
+.bottomsheet-container {
+  /* position: fixed;
+  bottom: 0; */
+  width: 100%;
+  transition: height 0.3s ease;
+  /* text-align: center; */
+}
+
+.content {
+  padding: 10px;
+}
+
+.handle {
+  display: block;
+  /* 항상 보이도록 설정 */
+  width: 40px;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.handle::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  /* 요소의 위쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+  bottom: -5px;
+  /* 요소의 아래쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+  left: -5px;
+  /* 요소의 왼쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+  right: -5px;
+  /* 요소의 오른쪽으로 5px만큼 이동하여 클릭 영역을 늘립니다. */
+}
+
+/*# sourceMappingURL=style.css.map */
